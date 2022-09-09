@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import SubForm from './SubForm';
+import { Link } from 'react-router-dom';
 
 const SubShow = ({ id, title, deleteSub, updateSub }) => {
   // this will keep track of if we are editing
@@ -37,6 +38,9 @@ const SubShow = ({ id, title, deleteSub, updateSub }) => {
       >
         Delete
       </button>
+      <Link to={`/${id}/topics`}>
+        <button>Topics</button>
+      </Link>
     </>
   )
 }
